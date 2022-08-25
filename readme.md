@@ -1,41 +1,9 @@
 ## Spring boot 기반 기본 프로젝트
 
-### 구조
-```
-Project
-└─src
-  └─main
-     ├─java
-     │  └─com.admin.tool
-     │     ├─api
-     │     │  ├─admin
-     │     │  ├─event
-     │     │  ├─guild
-     │     │  ├─shop
-     │     │  └─user
-     │     │      ├─controller
-     │     │      ├─dao
-     │     │      └─service
-     │     └─common
-     │         ├─aop
-     │         │  ├─annotation
-     │         │  └─aspect
-     │         ├─config
-     │         │  ├─db
-     │         │  ├─exception
-     │         │  ├─security
-     │         │  └─web
-     │         ├─model
-     │         └─util
-     └─resources
-         ├─mapper
-         │  ├─admin
-         │  └─user
-         └─message
-```
+Spring 최신 버전 (2.7) 기준으로 이것 저것 만들어봄
 
-### 개선
-- 다중 데이터소스 처리 및 매퍼 공용화 처리
-- 공용 익셉션 처리
-- 내장 톰캣
-- 
+- 기본 골격
+- Spring security rest + jwt
+- Route datasource
+
+기타 더 필요한 것들 수시로 추가
