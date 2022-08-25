@@ -1,0 +1,40 @@
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure:
+            logging: INFO
+
+---
+
+spring:
+  profiles:
+    active: default, local
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+route:
+  datasource:
+    -
+      label: root # example (lobby)
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: "jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
+      username: root
+      password: 1234
+#    -
+#      label: slave
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      jdbc-url: "jdbc:mysql://localhost:33016/world?characterEncoding=UTF-8&serverTimezone=UTC"
+#      username: root
+#      password: 1234
+
+---
+
+spring:
+  profiles:
+    active: prod

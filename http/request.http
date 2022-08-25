@@ -1,0 +1,30 @@
+### 일반 API 호출 시
+
+GET localhost:8080/api/users
+Accept: application/json
+
+### Auth Token 발급
+
+POST localhost:8080/login
+Accept: application/json
+
+{
+
+}
+
+### Auth Token 미사용
+
+POST localhost:8080/auth/user
+Accept: application/json
+
+{
+
+}
+
+### Auth Token 사용
+
+POST localhost:8080/auth/user
+Accept: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJuYW1lIjoibmFtZSIsImlkIjoiaWQiLCJhdXRoTGlzdCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjYxNjE0ODUzfQ.1Fqx_7Q7PBPN_Cq9gWbOG3o470HG0C3KpO_7ExhNZ22uKb5Z1dQF6ceGTOdomnfWh8ZgEVaenPlgXGc4Ks8THQ
+
+
