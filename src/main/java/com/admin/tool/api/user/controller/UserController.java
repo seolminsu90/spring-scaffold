@@ -36,15 +36,20 @@ public class UserController {
     }
 
     // 프론트엔드와의 Cookie 공유 테스트 (다른 도메인에도 되도록)
+    // 테스트 결과 RestAPI에서 쿠키는 같은 도메인 그룹일때나 써야겠다...
     @GetMapping("/cookieSet")
-    public ResponseEntity<ApiResponse<String>> cookieSetTest(@CookieValue(name = "mycookie", required = false) String myCookie, HttpServletResponse response) {
-        System.out.println("myCookie : " + myCookie);
+    public ResponseEntity<ApiResponse<String>> cookieSetTest(@CookieValue(name = "MakeClient", required = false) String c1,
+                                                             @CookieValue(name = "MakeServer", required = false) String c2,
+                                                             HttpServletResponse response) {
+        System.out.println("MakeClient : " + c1);
+        System.out.println("MakeServer : " + c2);
 
-        ResponseCookie cookie = ResponseCookie.from("mycookie", "FromServer")
+        ResponseCookie cookie = ResponseCookie.from("MakeServer", "FromServer")
                 .path("/")
                 .secure(true)
                 .sameSite("None")
                 .httpOnly(true)
+                .maxAge(60 * 60 * 2)// 2 Hours
                 //.domain("예)abcd.com")
                 .build();
 
