@@ -48,6 +48,7 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.OPTIONS, "/**")
                 .permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/api/users/**").permitAll() // 테스트용 오픈
                 .anyRequest().authenticated()
 
                 .and()
