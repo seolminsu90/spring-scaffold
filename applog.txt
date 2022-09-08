@@ -1,0 +1,1236 @@
+2022-09-08 20:51:21.391[ERROR] o.s.b.SpringApplication.reportFailure 824  : Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-09-08 20:53:41.625[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 4344 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 20:53:41.627[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 20:53:41.706[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 20:53:41.706[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 20:53:44.906[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 20:53:44.920[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 20:53:44.921[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 20:53:44.922[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 20:53:45.051[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 20:53:45.052[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3345 ms
+2022-09-08 20:53:45.233[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 20:53:45.372[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 20:53:50.729[ERROR] c.z.h.p.HikariPool.throwPoolInitializationException 594  : HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:194)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy.afterPropertiesSet(LazyConnectionDataSourceProxy.java:164)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy.<init>(LazyConnectionDataSourceProxy.java:108)
+	at com.admin.tool.common.config.db.RouteDatasourceConfig.lazyRoutingDataSource(RouteDatasourceConfig.java:80)
+	at com.admin.tool.common.config.db.RouteDatasourceConfig$$EnhancerBySpringCGLIB$$b9656b5f.CGLIB$lazyRoutingDataSource$3(<generated>)
+	at com.admin.tool.common.config.db.RouteDatasourceConfig$$EnhancerBySpringCGLIB$$b9656b5f$$FastClassBySpringCGLIB$$83d981b9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.admin.tool.common.config.db.RouteDatasourceConfig$$EnhancerBySpringCGLIB$$b9656b5f.lazyRoutingDataSource(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1492)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1616)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2113)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.addBinders(MeterRegistryConfigurer.java:86)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.configure(MeterRegistryConfigurer.java:68)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryPostProcessor.postProcessAfterInitialization(MeterRegistryPostProcessor.java:64)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 132 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 135 common frames omitted
+2022-09-08 20:53:50.749[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 20:53:55.862[ERROR] c.z.h.p.HikariPool.throwPoolInitializationException 594  : HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:194)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy.afterPropertiesSet(LazyConnectionDataSourceProxy.java:164)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1492)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1616)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2113)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.addBinders(MeterRegistryConfigurer.java:86)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.configure(MeterRegistryConfigurer.java:68)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryPostProcessor.postProcessAfterInitialization(MeterRegistryPostProcessor.java:64)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 118 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 121 common frames omitted
+2022-09-08 20:53:56.029[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 20:54:01.144[ERROR] c.z.h.p.HikariPool.throwPoolInitializationException 594  : HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:194)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$logDataSources$0(H2ConsoleAutoConfiguration.java:75)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources(H2ConsoleAutoConfiguration.java:81)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 88 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 91 common frames omitted
+2022-09-08 20:54:01.163[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 20:54:06.274[ERROR] c.z.h.p.HikariPool.throwPoolInitializationException 594  : HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:194)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.getTargetConnection(LazyConnectionDataSourceProxy.java:405)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.invoke(LazyConnectionDataSourceProxy.java:378)
+	at com.sun.proxy.$Proxy90.getMetaData(Unknown Source)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$logDataSources$0(H2ConsoleAutoConfiguration.java:76)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources(H2ConsoleAutoConfiguration.java:81)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 91 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 94 common frames omitted
+2022-09-08 20:54:07.483[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: e23c1735-714e-4c0b-b19c-05b1044c273e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 20:54:07.652[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27405ca8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ff39203, org.springframework.security.web.context.SecurityContextPersistenceFilter@16f0d5ff, org.springframework.security.web.header.HeaderWriterFilter@5f97b0c5, org.springframework.security.web.authentication.logout.LogoutFilter@2e5aeb75, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@6d513c00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fa2ae8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@192b05da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78728978, org.springframework.security.web.session.SessionManagementFilter@5b5e52d5, org.springframework.security.web.access.ExceptionTranslationFilter@f887b81, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@405501d2]
+2022-09-08 20:54:07.663[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@3c907735. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 20:54:07.664[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@3c907735
+2022-09-08 20:54:08.489[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 20:54:08.501[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 20:54:08.547[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 20:54:08.572[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 20:54:08.589[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 27.666 seconds (JVM running for 28.336)
+2022-09-08 20:55:53.430[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 3648 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 20:55:53.433[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 20:55:53.503[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 20:55:53.504[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 20:55:56.292[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 20:55:56.307[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 20:55:56.308[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 20:55:56.309[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 20:55:56.406[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 20:55:56.407[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 2902 ms
+2022-09-08 20:55:56.624[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 20:55:56.744[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 20:55:57.128[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 20:55:57.234[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 20:55:58.318[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 5a43d549-8c87-49f6-90b0-3afe14efe43c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 20:55:58.575[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50634dd5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c37fe8d, org.springframework.security.web.context.SecurityContextPersistenceFilter@31f11705, org.springframework.security.web.header.HeaderWriterFilter@37fcf06a, org.springframework.security.web.authentication.logout.LogoutFilter@4d2ebbfa, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@1f23a0db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d1bee87, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b5c34b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b154781, org.springframework.security.web.session.SessionManagementFilter@618fd783, org.springframework.security.web.access.ExceptionTranslationFilter@66cc3dab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69e2a955]
+2022-09-08 20:55:58.581[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@4b996726. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 20:55:58.582[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@4b996726
+2022-09-08 20:55:59.600[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 20:55:59.609[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 20:55:59.692[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 20:55:59.730[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 20:55:59.750[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.002 seconds (JVM running for 7.659)
+2022-09-08 20:56:07.723[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 20:56:07.725[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 20:56:07.726[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 1 ms
+2022-09-08 21:10:14.250[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 7788 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:10:14.255[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:10:14.330[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:10:14.330[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:10:17.225[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:10:17.242[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:10:17.243[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:10:17.243[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:10:17.392[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:10:17.393[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3062 ms
+2022-09-08 21:10:17.569[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:10:17.667[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:10:18.062[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:10:18.195[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:10:19.224[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 481cb21c-94e3-4591-a665-12ab7190a25b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:10:19.492[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3185ea2c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@276a3ab4, org.springframework.security.web.context.SecurityContextPersistenceFilter@7cf20ef5, org.springframework.security.web.header.HeaderWriterFilter@7966f37f, org.springframework.security.web.authentication.logout.LogoutFilter@64d6671c, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@5d141c39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35ab64b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1be9ed71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c11cbe4, org.springframework.security.web.session.SessionManagementFilter@3c1a183a, org.springframework.security.web.access.ExceptionTranslationFilter@7da7240, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e410717]
+2022-09-08 21:10:19.511[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@1eac6985. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:10:19.512[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@1eac6985
+2022-09-08 21:10:20.915[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:10:20.922[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:10:20.967[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:10:20.987[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:10:21.010[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.412 seconds (JVM running for 8.057)
+2022-09-08 21:10:23.344[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:10:23.346[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:10:23.347[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 1 ms
+2022-09-08 21:10:23.414[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 17  : i8dnelUn2IxegQAqwQvhHecJMVrqsb0IOPf7zEy9xHXNIOnRb1wxrsFTFpIVaej0yFYYCwopb9QAAAGDHQINGw
+2022-09-08 21:11:24.573[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 7708 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:11:24.574[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:11:24.636[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:11:24.637[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:11:27.221[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:11:27.235[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:11:27.236[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:11:27.237[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:11:27.418[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:11:27.419[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 2782 ms
+2022-09-08 21:11:27.871[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:11:27.968[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:11:28.284[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:11:28.379[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:11:29.175[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 748d9b40-c384-4ed5-aef4-e4d9cd39c277
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:11:29.369[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f463e1c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74a5d1b9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e9e1e5f, org.springframework.security.web.header.HeaderWriterFilter@1462264a, org.springframework.security.web.authentication.logout.LogoutFilter@66849522, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@491ff8b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@444f9153, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5750112f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24f27d48, org.springframework.security.web.session.SessionManagementFilter@170f36d7, org.springframework.security.web.access.ExceptionTranslationFilter@6bb42213, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3eecba8f]
+2022-09-08 21:11:29.395[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@220cb0e. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:11:29.397[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@220cb0e
+2022-09-08 21:11:30.423[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:11:30.442[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:11:30.526[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:11:30.593[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:11:30.631[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 6.687 seconds (JVM running for 7.369)
+2022-09-08 21:11:35.401[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:11:35.402[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:11:35.409[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 7 ms
+2022-09-08 21:11:35.472[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 17  : wx1SwUIQjo1j0wmABzJavGPcPuDpjE-TqLG48gLPJofmxHY6Wh_MX9gJwnYSbJCPbwCqaQopyNkAAAGDHQMmkg
+2022-09-08 21:26:26.755[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 17264 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:26:26.758[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:26:26.861[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:26:26.862[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:26:29.756[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:26:29.770[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:26:29.771[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:26:29.772[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:26:29.872[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:26:29.874[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3011 ms
+2022-09-08 21:26:30.126[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:26:30.200[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:26:30.568[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:26:30.784[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:26:31.943[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 841b0e23-aa48-4be4-94ea-bcea092122e7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:26:32.249[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b154781, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@599af984, org.springframework.security.web.context.SecurityContextPersistenceFilter@37fcf06a, org.springframework.security.web.header.HeaderWriterFilter@6118f9eb, org.springframework.security.web.authentication.logout.LogoutFilter@39491962, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@5a05ed1c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7addc4d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30b47951, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@135d1a87, org.springframework.security.web.session.SessionManagementFilter@a6b7df0, org.springframework.security.web.access.ExceptionTranslationFilter@1cd0cbb8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30885eb1]
+2022-09-08 21:26:32.343[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@6482ad1a. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:26:32.365[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@6482ad1a
+2022-09-08 21:26:34.557[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:26:34.573[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:26:34.623[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:26:34.650[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:26:34.687[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 8.787 seconds (JVM running for 9.893)
+2022-09-08 21:26:38.204[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:26:38.205[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:26:38.207[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 21:26:38.276[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 21  : ====== Get AuthorizationCode ======
+2022-09-08 21:26:38.277[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : HAtHVliZBlovWMuImr_rWZcczNvC0n2vvu1eWH-rDS4SKSngAzEq7QYLH6_Rc4nZax2WWAo9dNsAAAGDHRDtOw
+2022-09-08 21:26:38.689[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 21:26:38.804[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]]
+2022-09-08 21:30:21.514[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 14940 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:30:21.516[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:30:21.576[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:30:21.577[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:30:24.720[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:30:24.741[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:30:24.742[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:30:24.743[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:30:25.019[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:30:25.020[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3442 ms
+2022-09-08 21:30:25.445[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:30:25.647[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:30:26.596[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:30:26.819[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:30:28.202[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 1f47ad0a-8f14-45f6-a74d-3ef6d7a5a358
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:30:28.403[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3749d86b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55aff7a4, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ffbec93, org.springframework.security.web.header.HeaderWriterFilter@46069075, org.springframework.security.web.authentication.logout.LogoutFilter@464e4cff, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@31759492, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55f8b0e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b818826, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34a46a95, org.springframework.security.web.session.SessionManagementFilter@314cb7ef, org.springframework.security.web.access.ExceptionTranslationFilter@15c6bd3f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ac750b]
+2022-09-08 21:30:28.428[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@69565ed9. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:30:28.435[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@69565ed9
+2022-09-08 21:30:29.356[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:30:29.369[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:30:29.424[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:30:29.484[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:30:29.549[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 8.678 seconds (JVM running for 9.291)
+2022-09-08 21:30:36.648[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:30:36.648[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:30:36.651[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 3 ms
+2022-09-08 21:30:36.724[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 21  : ====== Get AuthorizationCode ======
+2022-09-08 21:30:36.724[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : eUNGiHJi8LBJX3WCayLQF0OZOd6o5b1fwmm6KgDpZRVd9H0YMiqNrvys65vjpbQG1LkptAorDKYAAAGDHRSQpg
+2022-09-08 21:30:37.045[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 21:30:37.116[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]]
+2022-09-08 21:33:01.150[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 5984 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:33:01.154[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:33:01.217[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:33:01.218[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:33:04.238[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:33:04.252[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:33:04.253[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:33:04.254[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:33:04.364[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:33:04.365[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3145 ms
+2022-09-08 21:33:04.549[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:33:04.612[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:33:04.924[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:33:05.036[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:33:05.926[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 67b7f867-6b78-45af-b0ff-96a5b48ffa81
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:33:06.130[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49a3645, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79667221, org.springframework.security.web.context.SecurityContextPersistenceFilter@59cf5086, org.springframework.security.web.header.HeaderWriterFilter@24b570ce, org.springframework.security.web.authentication.logout.LogoutFilter@22df9e71, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@4e7309f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@674b866b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c1cb3f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22608c22, org.springframework.security.web.session.SessionManagementFilter@1ba7528d, org.springframework.security.web.access.ExceptionTranslationFilter@475c9ec5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bacd5b2]
+2022-09-08 21:33:06.159[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@10e77da7. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:33:06.160[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@10e77da7
+2022-09-08 21:33:06.990[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:33:07.000[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:33:07.040[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:33:07.065[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:33:07.097[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 6.7 seconds (JVM running for 7.297)
+2022-09-08 21:33:16.257[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:33:16.257[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:33:16.259[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 21:33:16.330[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 21  : ====== Get AuthorizationCode ======
+2022-09-08 21:33:16.330[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : _snS70UWTo9A6tyayofMUWsReOpGZCJ2VAh6Ybs86uNZWRJ0REntrWen57IijKO2zD3yBgopcFEAAAGDHRcAZw
+2022-09-08 21:33:16.625[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 21:33:16.710[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"Redirect URI mismatch.","error_code":"KOE303"}"]
+2022-09-08 21:35:24.779[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 5000 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:35:24.781[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:35:24.887[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:35:24.888[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:35:28.292[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:35:28.308[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:35:28.309[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:35:28.310[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:35:28.540[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:35:28.540[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3651 ms
+2022-09-08 21:35:28.922[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:35:29.062[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:35:29.397[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:35:29.525[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:35:31.460[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: d59927fb-9edd-4236-b6fe-6d3e8eccada6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:35:31.742[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e3ffa5b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12aeb61d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c2df606, org.springframework.security.web.header.HeaderWriterFilter@5a5008a1, org.springframework.security.web.authentication.logout.LogoutFilter@68660d5a, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@67efaab4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@da6a971, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28d0186f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@783336d5, org.springframework.security.web.session.SessionManagementFilter@4685db08, org.springframework.security.web.access.ExceptionTranslationFilter@2bccaf8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c9528b]
+2022-09-08 21:35:31.796[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@1c25593d. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:35:31.802[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@1c25593d
+2022-09-08 21:35:32.748[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:35:32.769[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:35:32.828[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:35:32.858[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:35:33.045[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 8.931 seconds (JVM running for 9.581)
+2022-09-08 21:35:41.518[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:35:41.519[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:35:41.521[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 21:35:41.589[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 21  : ====== Get AuthorizationCode ======
+2022-09-08 21:35:41.589[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : brb7aOSHgteletrbJC3vKdzA1exUZU90W-Wl_D1hMxpWRWz8CRO5l3P5YHI53Lnt5KJl_Qopb7gAAAGDHRk3bA
+2022-09-08 21:39:36.631[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 18944 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:39:36.668[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:39:36.824[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:39:36.825[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:39:40.386[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:39:40.401[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:39:40.438[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:39:40.439[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:39:40.597[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:39:40.598[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3773 ms
+2022-09-08 21:39:40.769[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:39:40.842[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:39:41.166[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:39:41.280[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:39:42.854[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: c8079fb9-d245-4339-a5ae-6d5f423430a4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:39:43.050[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24f75cb0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c8f7be7, org.springframework.security.web.context.SecurityContextPersistenceFilter@73a57d7a, org.springframework.security.web.header.HeaderWriterFilter@364e1c34, org.springframework.security.web.authentication.logout.LogoutFilter@73c62408, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@13e008a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41556809, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@112b05ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8e716cf, org.springframework.security.web.session.SessionManagementFilter@720de74d, org.springframework.security.web.access.ExceptionTranslationFilter@226b8e00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@170fe3fa]
+2022-09-08 21:39:43.060[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7aa079e6. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:39:43.062[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7aa079e6
+2022-09-08 21:39:43.967[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:39:43.981[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:39:44.058[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:39:44.109[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:39:44.135[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 8.636 seconds (JVM running for 9.292)
+2022-09-08 21:40:34.775[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:40:34.776[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:40:34.778[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 21:40:34.848[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : ====== Get AuthorizationCode ======
+2022-09-08 21:40:34.849[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 23  : cWHR1HmyKoqtXrwUZ7lZtdYCOtEX-BqENUP21DjGlf4MFZHzo3UVe-8DSn5xOse-YR_DFAo9dNsAAAGDHR2xJw
+2022-09-08 21:40:35.261[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 25  : z17Dcnhr6rQeuHH8cO8Wmc2cc7Jt5NyW5E-05MHFCj1zFwAAAYMdHbM2
+2022-09-08 21:41:01.392[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : ====== Get AuthorizationCode ======
+2022-09-08 21:41:01.392[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 23  : osghFlmoNZKPf70dLJnr3vhUzP1bc_XoVu5655J71XMeuhmu_zbUnLkjTGjqlkxBexcsNAo9dNkAAAGDHR4Zaw
+2022-09-08 21:41:01.474[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 25  : eP32iVPga4fTIG7lffCvFqumrrwUJ1Qhld2d3Cz5Cj11WgAAAYMdHhm-
+2022-09-08 21:42:03.104[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 13384 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:42:03.110[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:42:03.194[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:42:03.199[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:42:06.276[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:42:06.288[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:42:06.289[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:42:06.290[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:42:06.387[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:42:06.388[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3188 ms
+2022-09-08 21:42:06.634[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:42:06.734[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:42:07.065[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:42:07.176[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:42:08.120[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 32421a60-029a-4a62-b268-f1e0a0955b31
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:42:08.342[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7441d26e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33e1a2da, org.springframework.security.web.context.SecurityContextPersistenceFilter@12bd126c, org.springframework.security.web.header.HeaderWriterFilter@270263e, org.springframework.security.web.authentication.logout.LogoutFilter@2da09aa5, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@447eafa7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13ce078b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e53dd2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10e77da7, org.springframework.security.web.session.SessionManagementFilter@5c5b3707, org.springframework.security.web.access.ExceptionTranslationFilter@6942596f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@126ab1a5]
+2022-09-08 21:42:08.351[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@410edd8b. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:42:08.352[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@410edd8b
+2022-09-08 21:42:09.251[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:42:09.265[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:42:09.380[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:42:09.405[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:42:09.424[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.008 seconds (JVM running for 7.642)
+2022-09-08 21:42:15.124[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:42:15.125[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:42:15.130[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 5 ms
+2022-09-08 21:42:15.209[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 22  : ====== From AuthorizationCode ======
+2022-09-08 21:42:15.209[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 23  : tOF5KD4Yn2rJHxeOpdjrq2NPnzReGilSX5u0vSiQFLKk2pskSaRvTNbTJJ4FCB9GrFt1iQopyWAAAAGDHR85FQ
+2022-09-08 21:42:15.728[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 27  : ====== Get AccessToken ======
+2022-09-08 21:42:15.728[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 28  : CL_0XccXh2bsSROq8IkyUHZHvDgX1WLFfPqONBtmCinJYAAAAYMdHzu-
+2022-09-08 21:43:49.236[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 6532 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 21:43:49.237[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 21:43:49.301[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 21:43:49.301[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 21:43:51.938[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 21:43:51.952[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:43:51.953[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 21:43:51.953[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 21:43:52.066[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 21:43:52.068[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 2766 ms
+2022-09-08 21:43:52.337[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 21:43:52.417[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 21:43:52.738[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 21:43:52.835[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 21:43:53.717[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 76ec813b-543f-43ab-81cc-ea3946e0d223
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 21:43:53.952[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2578d919, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d1fb4db, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c151c3a, org.springframework.security.web.header.HeaderWriterFilter@8357485, org.springframework.security.web.authentication.logout.LogoutFilter@5b818826, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@511da1db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3caf85d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c4c4bff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@598ec117, org.springframework.security.web.session.SessionManagementFilter@15cb15e3, org.springframework.security.web.access.ExceptionTranslationFilter@5761c595, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c5a9eab]
+2022-09-08 21:43:53.964[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2ad94d4f. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 21:43:53.964[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2ad94d4f
+2022-09-08 21:43:54.923[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 21:43:54.948[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 21:43:55.005[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 21:43:55.026[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 21:43:55.044[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 6.417 seconds (JVM running for 7.019)
+2022-09-08 21:44:00.499[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 21:44:00.501[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 21:44:00.503[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 21:44:00.585[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 25  : ====== From AuthorizationCode ======
+2022-09-08 21:44:00.586[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 26  : CIhVOBpleqT96iFyCUsEbVCkp1CBw6AahdTlGjrU62k-2lBmeXO5ju-cblS2YxywsaINywo9dVwAAAGDHSDUqw
+2022-09-08 21:44:01.050[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 30  : ====== Get AccessToken ======
+2022-09-08 21:44:01.050[INFO ] c.a.t.a.l.c.KakaoLoginController.kakaoLoginRedirect 31  : Hms-P6zhZEmdPUhauAMVJd3tDQGpRPgJ-4n5fg8KCj11GwAAAYMdINcW
+2022-09-08 22:21:33.985[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 5580 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 22:21:33.987[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 22:21:34.140[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 22:21:34.149[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 22:21:37.312[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 22:21:37.331[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:21:37.333[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 22:21:37.333[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 22:21:37.480[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 22:21:37.480[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3324 ms
+2022-09-08 22:21:37.722[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 22:21:37.878[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 22:21:38.375[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 22:21:38.530[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 22:21:39.689[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: e4d388c2-4fdb-4a9f-b260-102a1d29ad41
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 22:21:39.995[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6017b53a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b7c3789, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c123a, org.springframework.security.web.header.HeaderWriterFilter@34b6b7b4, org.springframework.security.web.authentication.logout.LogoutFilter@6aa96938, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@5e6d49d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27b4ab68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15dfef5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b132d6d, org.springframework.security.web.session.SessionManagementFilter@4f8bf4e0, org.springframework.security.web.access.ExceptionTranslationFilter@70fdf70a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d04d69f]
+2022-09-08 22:21:40.023[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@4707252. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 22:21:40.026[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@4707252
+2022-09-08 22:21:41.091[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 22:21:41.108[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 22:21:41.156[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:21:41.181[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 22:21:41.211[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.988 seconds (JVM running for 8.629)
+2022-09-08 22:22:30.312[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 22:22:30.313[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 22:22:30.315[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 22:26:46.290[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 12320 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 22:26:46.292[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 22:26:46.382[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 22:26:46.382[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 22:26:49.088[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 22:26:49.104[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:26:49.104[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 22:26:49.105[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 22:26:49.209[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 22:26:49.209[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 2826 ms
+2022-09-08 22:26:49.439[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 22:26:49.549[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 22:26:49.972[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 22:26:50.122[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 22:26:51.030[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: d6c186c5-8fa3-4822-b00b-32c1277c5be3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 22:26:51.276[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cc37c44, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6650aa27, org.springframework.security.web.context.SecurityContextPersistenceFilter@27ba9f46, org.springframework.security.web.header.HeaderWriterFilter@59cf5086, org.springframework.security.web.authentication.logout.LogoutFilter@2937b35a, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@188d1e38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26ec78b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33a33abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3abf1bf1, org.springframework.security.web.session.SessionManagementFilter@244fb9fc, org.springframework.security.web.access.ExceptionTranslationFilter@1c5812c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e4c98bb]
+2022-09-08 22:26:51.294[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@71ff3b2e. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 22:26:51.294[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@71ff3b2e
+2022-09-08 22:26:52.335[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 22:26:52.353[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 22:26:52.406[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:26:52.428[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 22:26:52.445[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 6.856 seconds (JVM running for 7.493)
+2022-09-08 22:26:58.778[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 22:26:58.779[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 22:26:58.781[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 22:26:58.853[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:26:58.924[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2022-09-08 22:27:39.489[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 9960 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 22:27:39.494[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 22:27:39.587[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 22:27:39.587[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 22:27:42.611[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 22:27:42.633[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:27:42.634[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 22:27:42.637[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 22:27:42.825[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 22:27:42.826[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3237 ms
+2022-09-08 22:27:43.017[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 22:27:43.084[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 22:27:43.472[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 22:27:43.607[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 22:27:44.555[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 274d5a4e-be47-45e8-9ac7-548a2acca6e8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 22:27:44.842[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@757b45e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57376e51, org.springframework.security.web.context.SecurityContextPersistenceFilter@7407f2bc, org.springframework.security.web.header.HeaderWriterFilter@6f5a181d, org.springframework.security.web.authentication.logout.LogoutFilter@365ccc03, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@6f0527b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6be0328, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@be1383e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f167d4f, org.springframework.security.web.session.SessionManagementFilter@1e6df79a, org.springframework.security.web.access.ExceptionTranslationFilter@547c506f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23b02bdc]
+2022-09-08 22:27:44.867[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@783336d5. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 22:27:44.870[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@783336d5
+2022-09-08 22:27:45.789[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 22:27:45.799[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 22:27:45.866[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:27:45.915[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 22:27:45.952[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.175 seconds (JVM running for 7.834)
+2022-09-08 22:28:01.520[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 22:28:01.521[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 22:28:01.529[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 8 ms
+2022-09-08 22:28:01.927[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 26  : ====== From AuthorizationCode ======
+2022-09-08 22:28:01.928[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 27  : dr5ZitP2gJMZMK0VIgzLi7ELue9VocM7ozpabObp-NPKanEMeMZNpYwyju1oS6B-2KjVmAopcBMAAAGDHUkdzA
+2022-09-08 22:28:02.419[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:28:02.460[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"Redirect URI mismatch.","error_code":"KOE303"}"]
+2022-09-08 22:28:59.241[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 26  : ====== From AuthorizationCode ======
+2022-09-08 22:28:59.242[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 27  : dr5ZitP2gJMZMK0VIgzLi7ELue9VocM7ozpabObp-NPKanEMeMZNpYwyju1oS6B-2KjVmAopcBMAAAGDHUkdzA
+2022-09-08 22:28:59.298[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:28:59.305[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=dr5ZitP2gJMZMK0VIgzLi7ELue9VocM7ozpabObp-NPKanEMeMZNpYwyju1oS6B-2KjVmAopcBMAAAGDHUkdzA","error_code":"KOE320"}"]
+2022-09-08 22:29:20.886[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 16452 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 22:29:20.887[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 22:29:20.965[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 22:29:20.967[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 22:29:24.580[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 22:29:24.595[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:29:24.596[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 22:29:24.597[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 22:29:25.019[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 22:29:25.020[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 4053 ms
+2022-09-08 22:29:25.384[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 22:29:25.481[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 22:29:25.988[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 22:29:26.164[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 22:29:27.167[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 65efca2b-3b53-4f2a-a8a2-0c101fc48b67
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 22:29:27.417[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a157194, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@757b45e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d849ab8, org.springframework.security.web.header.HeaderWriterFilter@4a72cc5a, org.springframework.security.web.authentication.logout.LogoutFilter@342f7130, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@3e3dd8a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ff15e20, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6be0328, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57376e51, org.springframework.security.web.session.SessionManagementFilter@28a435c9, org.springframework.security.web.access.ExceptionTranslationFilter@667439b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64f17e09]
+2022-09-08 22:29:27.444[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@12aeb61d. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 22:29:27.445[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@12aeb61d
+2022-09-08 22:29:29.236[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 22:29:29.253[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 22:29:29.353[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:29:29.387[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 22:29:29.416[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 9.476 seconds (JVM running for 10.223)
+2022-09-08 22:29:36.883[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 22:29:36.884[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 22:29:36.888[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 4 ms
+2022-09-08 22:29:37.064[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 26  : ====== From AuthorizationCode ======
+2022-09-08 22:29:37.064[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 27  : W9CLMHJQeC8dtRQ6RcPZE_bD6toDHasC1Dr-g9rVDJ5hRwOzG_gUmutlnv8933Ye0Au7Dwo9dGgAAAGDHUqSQQ
+2022-09-08 22:29:37.382[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 31  : ====== Get AccessToken ======
+2022-09-08 22:29:37.383[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 32  : MuTadOWvzYjZaU0Se-YsTHrLAw4CGTDG_yseYM31Cj11mgAAAYMdSpga
+2022-09-08 22:47:15.117[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 13844 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 22:47:15.119[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 22:47:15.233[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 22:47:15.234[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 22:47:18.478[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 22:47:18.493[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:47:18.494[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 22:47:18.494[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 22:47:18.633[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 22:47:18.633[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3398 ms
+2022-09-08 22:47:18.848[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 22:47:18.946[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 22:47:19.393[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 22:47:19.561[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 22:47:20.602[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 839ec793-7b05-47a5-8676-2003c6ea1fec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 22:47:20.832[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76874d11, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fec5c53, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fc121e, org.springframework.security.web.header.HeaderWriterFilter@28b02bf6, org.springframework.security.web.authentication.logout.LogoutFilter@16bd0382, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@4b5f4848, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eaeb002, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21dba516, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24a0a219, org.springframework.security.web.session.SessionManagementFilter@23ebe070, org.springframework.security.web.access.ExceptionTranslationFilter@bb59032, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4cecb5df]
+2022-09-08 22:47:20.843[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@219f59b9. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 22:47:20.843[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@219f59b9
+2022-09-08 22:47:21.999[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 22:47:22.014[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 22:47:22.076[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:47:22.122[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 22:47:22.166[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.766 seconds (JVM running for 8.387)
+2022-09-08 22:47:30.479[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 22:47:30.479[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 22:47:30.481[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-08 22:47:30.638[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:47:31.138[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:47:31.186[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=W9CLMHJQeC8dtRQ6RcPZE_bD6toDHasC1Dr-g9rVDJ5hRwOzG_gUmutlnv8933Ye0Au7Dwo9dGgAAAGDHUqSQQ","error_code":"KOE320"}"]
+2022-09-08 22:47:36.310[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:48:17.179[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:48:17.232[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:48:17.240[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=CFpRvhCSgbXywa5HPMP4aREIjslkAxck80GdSgzfaK5dHvInD2jnVqkHD38iQC5ue05jbAo9cpgAAAGDHVsMvQ","error_code":"KOE320"}"]
+2022-09-08 22:48:27.505[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:48:27.570[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:48:27.574[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=CFpRvhCSgbXywa5HPMP4aREIjslkAxck80GdSgzfaK5dHvInD2jnVqkHD38iQC5ue05jbAo9cpgAAAGDHVsMvQ","error_code":"KOE320"}"]
+2022-09-08 22:48:37.309[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:49:01.488[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:49:01.542[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:49:01.547[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:49:43.386[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:49:43.437[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:49:43.444[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:49:49.565[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:49:49.618[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:49:49.622[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:50:12.557[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:50:12.607[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:50:12.612[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:54:55.037[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 1812 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-08 22:54:55.039[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-08 22:54:55.092[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-08 22:54:55.092[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-08 22:54:58.219[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 22:54:58.235[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:54:58.235[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-08 22:54:58.236[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 22:54:58.397[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-08 22:54:58.399[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3306 ms
+2022-09-08 22:54:58.569[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 54  : Create Datasoure root
+2022-09-08 22:54:58.717[INFO ] c.z.h.HikariDataSource.getConnection 110  : HikariPool-1 - Starting...
+2022-09-08 22:54:59.147[INFO ] c.z.h.HikariDataSource.getConnection 123  : HikariPool-1 - Start completed.
+2022-09-08 22:54:59.247[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Databases available at 'jdbc:h2:mem:testdb', 'jdbc:h2:mem:testdb'
+2022-09-08 22:55:00.142[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: d6eaea3d-5ba8-488b-aa2f-75600d6df67c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-08 22:55:00.366[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7133e214, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b2ff9cf, org.springframework.security.web.context.SecurityContextPersistenceFilter@3baf0ec6, org.springframework.security.web.header.HeaderWriterFilter@69390666, org.springframework.security.web.authentication.logout.LogoutFilter@2317ab5a, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@7f5584de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@283546eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b1b00f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@170fe3fa, org.springframework.security.web.session.SessionManagementFilter@4e733533, org.springframework.security.web.access.ExceptionTranslationFilter@7748de81, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a7a038e]
+2022-09-08 22:55:00.379[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@6b3366c5. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-08 22:55:00.381[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@6b3366c5
+2022-09-08 22:55:01.243[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-08 22:55:01.255[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-08 22:55:01.312[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-08 22:55:01.353[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 22:55:01.384[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 6.947 seconds (JVM running for 7.542)
+2022-09-08 22:55:07.101[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 22:55:07.102[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-08 22:55:07.106[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 4 ms
+2022-09-08 22:55:07.378[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:55:07.769[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:55:07.804[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:55:31.514[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:55:31.685[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:55:31.697[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:55:52.306[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:55:52.382[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:55:52.390[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:55:54.719[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:55:54.761[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:55:54.768[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:56:05.773[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:56:05.823[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:56:05.828[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:56:48.657[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:56:48.706[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:56:48.708[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:57:02.774[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:57:02.816[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:57:02.819[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:57:04.774[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:57:04.815[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:57:04.818[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:57:07.899[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:57:07.931[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:57:07.934[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=hjhCHENESvXinSUaO4azM2DIqO1ydq13zmlpZi5Ag2oW4wm4T1owiiWVZhLsuQPfK1jIKwopb1UAAAGDHVv6-g","error_code":"KOE320"}"]
+2022-09-08 22:57:15.796[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:57:18.664[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 22:57:18.707[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 22:57:18.710[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=VUDqrFoKzEtpUqRPKq4Z0cjGunGoRfLOemQPJLIcP_nLEQoiERMCxxk7CwwOEKKAPuXjEgo9dNsAAAGDHWPkig","error_code":"KOE320"}"]
+2022-09-08 23:19:45.173[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 23:19:54.322[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 23:19:54.374[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 23:19:54.377[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=9fX2HaLHu3bYpi9Ax_Vw8SkQswRLmOqLgOT_42MLiZ_viINuzPd-j7PAn_5uU-6FHQH3Igo9c5sAAAGDHXh6fA","error_code":"KOE320"}"]
+2022-09-08 23:19:56.570[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 23:19:56.611[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 23:19:56.614[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=9fX2HaLHu3bYpi9Ax_Vw8SkQswRLmOqLgOT_42MLiZ_viINuzPd-j7PAn_5uU-6FHQH3Igo9c5sAAAGDHXh6fA","error_code":"KOE320"}"]
+2022-09-08 23:20:00.634[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-08 23:20:00.675[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-08 23:20:00.678[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=9fX2HaLHu3bYpi9Ax_Vw8SkQswRLmOqLgOT_42MLiZ_viINuzPd-j7PAn_5uU-6FHQH3Igo9c5sAAAGDHXh6fA","error_code":"KOE320"}"]
+2022-09-08 23:20:12.063[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
