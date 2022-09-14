@@ -22,15 +22,21 @@ public class RoutingMapperAspect {
     public Object aroundTargetMethod(ProceedingJoinPoint thisJoinPoint) {
         MethodSignature methodSignature = (MethodSignature) thisJoinPoint.getSignature();
         Class<?> mapperInterface = methodSignature.getDeclaringType();
-        Method method = methodSignature.getMethod();
-        Parameter[] parameters = method.getParameters();
-        Object[] args = thisJoinPoint.getArgs();
 
         RoutingMapper routingMapper = mapperInterface.getDeclaredAnnotation(RoutingMapper.class);
         if (routingMapper != null) {
-            String keyLabel = findLookupKey(parameters, args);
-            log.debug("Route Key: {}", keyLabel);
-            ThreadLocalContext.set(keyLabel);
+            if (!"".equals(routingMapper.fixedLookupKey())) {
+                log.debug("Route Key(fixed): {}", routingMapper.fixedLookupKey());
+                ThreadLocalContext.set(routingMapper.fixedLookupKey());
+            } else {
+                Method method = methodSignature.getMethod();
+                Parameter[] parameters = method.getParameters();
+                Object[] args = thisJoinPoint.getArgs();
+
+                String keyLabel = findLookupKey(parameters, args);
+                log.debug("Route Key: {}", keyLabel);
+                ThreadLocalContext.set(keyLabel);
+            }
         }
 
         try {

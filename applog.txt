@@ -1234,3 +1234,918 @@ This generated password is for development use only. Your security configuration
 2022-09-08 23:20:00.675[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
 2022-09-08 23:20:00.678[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"error":"invalid_grant","error_description":"authorization code not found for code=9fX2HaLHu3bYpi9Ax_Vw8SkQswRLmOqLgOT_42MLiZ_viINuzPd-j7PAn_5uU-6FHQH3Igo9c5sAAAGDHXh6fA","error_code":"KOE320"}"]
 2022-09-08 23:20:12.063[INFO ] c.a.t.a.l.c.KakaoLoginController.getKakaoAuth 23  : ====== Get AccessToken ======
+2022-09-14 22:31:57.024[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 9072 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:31:57.025[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:31:57.179[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:31:57.180[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:32:00.833[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:32:00.847[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:32:00.847[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:32:00.848[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:32:00.997[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:32:00.997[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3816 ms
+2022-09-14 22:32:01.174[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:32:01.183[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:32:01.184[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:32:01.187[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:32:01.187[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:32:01.188[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:32:01.190[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:32:01.191[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:32:01.192[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:32:01.758[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:32:01.763[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:32:01.764[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-14 22:32:03.128[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:32:03.133[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:32:03.144[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:32:03.145[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:32:03.145[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:32:03.146[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:32:03.146[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:32:03.147[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:32:03.147[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:32:03.147[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:32:03.148[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:32:03.148[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:32:03.148[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:32:03.148[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:32:03.148[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:32:03.148[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:32:03.149[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:32:03.149[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:32:03.149[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:32:03.149[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:32:03.150[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:32:03.150[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:32:03.150[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:32:03.152[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:32:03.152[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:32:03.153[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:32:03.173[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:32:03.403[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 757ab0f0-dbcd-4a07-a745-b28ee99722ca
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:32:03.715[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30118de1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70e4b3fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@73b8e8c6, org.springframework.security.web.header.HeaderWriterFilter@41b870d1, org.springframework.security.web.authentication.logout.LogoutFilter@3d817234, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@1ed73ad6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c7348c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ef699a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a732f2e, org.springframework.security.web.session.SessionManagementFilter@2556bef8, org.springframework.security.web.access.ExceptionTranslationFilter@6c2cc02c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9992595]
+2022-09-14 22:32:03.730[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@172c7d90. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:32:03.731[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@172c7d90
+2022-09-14 22:32:05.446[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:32:05.460[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:32:05.502[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:32:05.568[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:32:05.622[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 9.434 seconds (JVM running for 10.408)
+2022-09-14 22:34:53.232[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 9072 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:34:53.233[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:34:53.636[WARN ] o.m.logging.Logger.warn 44  : No MyBatis mapper was found in '[com.admin.tool]' package. Please check your configuration.
+2022-09-14 22:34:53.760[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:34:53.761[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:34:53.761[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:34:53.762[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:34:53.788[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:34:53.789[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 553 ms
+2022-09-14 22:34:53.843[WARN ] c.a.l.Slf4jLogger.logWarning 24  : AtomikosDataSoureBean 'dataSource': poolSize equals default - this may cause performance problems!
+2022-09-14 22:34:53.846[INFO ] c.a.l.Slf4jLogger.logInfo 28  : dataSource: refreshed XAResource
+2022-09-14 22:34:53.869[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:af6ca9f1-45f1-4ce4-9b44-2c57cffa59ae'
+2022-09-14 22:34:54.174[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 39b1470c-2351-4b3c-8c6a-8ce9ced0f511
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:34:54.204[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:34:54.217[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68e7b792, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cd28625, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e883356, org.springframework.security.web.header.HeaderWriterFilter@254bbea4, org.springframework.web.filter.CorsFilter@151062b5, org.springframework.security.web.csrf.CsrfFilter@8908e7b, org.springframework.security.web.authentication.logout.LogoutFilter@dc197d4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@463d6b3d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@28a4aef4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@499515bb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31bdbc90, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e0acf59, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@264ce4a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c9b603c, org.springframework.security.web.session.SessionManagementFilter@32e78027, org.springframework.security.web.access.ExceptionTranslationFilter@21e83157, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74f6e8e3]
+2022-09-14 22:34:54.256[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:34:54.267[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:34:54.269[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:34:54.277[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 1.095 seconds (JVM running for 179.063)
+2022-09-14 22:34:54.284[INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent 58  : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   AtomikosJtaConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.transaction.jta.JtaTransactionManager', 'com.atomikos.icatch.jta.UserTransactionManager' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   AtomikosJtaConfiguration#atomikosDependsOnBeanFactoryPostProcessor matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.jta.atomikos.AtomikosDependsOnBeanFactoryPostProcessor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   AtomikosJtaConfiguration#atomikosTransactionManager matched:
+      - @ConditionalOnMissingBean (types: javax.transaction.TransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   AtomikosJtaConfiguration#userTransactionService matched:
+      - @ConditionalOnMissingBean (types: com.atomikos.icatch.config.UserTransactionService; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   AtomikosJtaConfiguration#xaDataSourceWrapper matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.jdbc.XADataSourceWrapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ManagementWebSecurityAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter,org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   MybatisAutoConfiguration#sqlSessionFactory matched:
+      - @ConditionalOnMissingBean (types: org.apache.ibatis.session.SqlSessionFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MybatisAutoConfiguration.MapperScannerRegistrarNotFoundConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.mybatis.spring.mapper.MapperFactoryBean,org.mybatis.spring.mapper.MapperScannerConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   XADataSourceAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'javax.transaction.TransactionManager', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.boot.jdbc.XADataSourceWrapper; SearchStrategy: all) found bean 'xaDataSourceWrapper'; @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-09-14 22:35:00.168[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Transaction Service: Entering shutdown (false, 9223372036854775807)...
+2022-09-14 22:35:00.175[INFO ] c.a.l.Slf4jLogger.logInfo 28  : atomikos connection pool 'dataSource': destroying pool...
+2022-09-14 22:35:00.296[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 9072 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:35:00.297[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:35:00.877[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:35:00.879[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:35:00.879[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:35:00.879[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:35:00.903[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:35:00.904[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 605 ms
+2022-09-14 22:35:00.986[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:35:00.992[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:35:00.993[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:35:00.998[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:35:00.999[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:35:01.000[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:35:01.001[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:35:01.001[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:35:01.003[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:35:01.038[WARN ] c.a.l.Slf4jLogger.logWarning 40  : Cannot initialize AtomikosDataSourceBean
+javax.naming.NamingException: Another resource already exists with name unique_H2_DB_root - pick a different name
+	at com.atomikos.util.IntraVmObjectFactory.createReference(IntraVmObjectFactory.java:78)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getReference(AbstractDataSourceBean.java:392)
+	at com.atomikos.jdbc.AbstractDataSourceBean.init(AbstractDataSourceBean.java:301)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:343)
+	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:194)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$logDataSources$0(H2ConsoleAutoConfiguration.java:75)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:395)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources(H2ConsoleAutoConfiguration.java:81)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2022-09-14 22:35:01.622[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:35:01.625[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:35:01.627[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:35:01.627[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:35:01.628[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:35:01.629[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:35:01.629[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:35:01.629[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:35:01.630[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:35:01.630[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:35:01.630[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:35:01.630[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:35:01.630[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:35:01.631[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:35:01.631[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:35:01.631[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:35:01.631[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:35:01.631[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:35:01.631[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:35:01.632[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:35:01.632[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:35:01.632[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:35:01.632[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:35:01.632[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:35:01.632[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:35:01.633[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:35:01.640[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:35:01.690[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 05f4c09e-ee70-486e-9979-76d2daf599dd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:35:01.737[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75476497, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ccd1b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@51c36411, org.springframework.security.web.header.HeaderWriterFilter@187010e3, org.springframework.security.web.authentication.logout.LogoutFilter@757459fe, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@7f72ef51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b6a449, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76d2ba0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6471a87d, org.springframework.security.web.session.SessionManagementFilter@2d48b8d8, org.springframework.security.web.access.ExceptionTranslationFilter@521572e7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@14c71bae]
+2022-09-14 22:35:01.745[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7c8d5754. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:35:01.747[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7c8d5754
+2022-09-14 22:35:02.021[WARN ] o.s.c.s.AbstractApplicationContext.refresh 591  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/C:/Users/seolm/test/spring-scaffold/target/classes/schema.sql]: create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" already exists; SQL statement:
+create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null) [42101-214]
+2022-09-14 22:35:02.023[INFO ] o.a.j.l.DirectJDKLog.log 173  : Stopping service [Tomcat]
+2022-09-14 22:35:02.026[WARN ] o.a.j.l.DirectJDKLog.log 173  : The web application [ROOT] appears to have started a thread named [Atomikos:1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.2/java.lang.Object.wait(Native Method)
+ app//com.atomikos.timing.PooledAlarmTimer.doWait(PooledAlarmTimer.java:105)
+ app//com.atomikos.timing.PooledAlarmTimer.run(PooledAlarmTimer.java:71)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+ java.base@11.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.2/java.lang.Thread.run(Thread.java:834)
+2022-09-14 22:35:02.036[INFO ] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage 136  : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-14 22:35:02.065[ERROR] o.s.b.SpringApplication.reportFailure 824  : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/C:/Users/seolm/test/spring-scaffold/target/classes/schema.sql]: create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" already exists; SQL statement:
+create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null) [42101-214]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/C:/Users/seolm/test/spring-scaffold/target/classes/schema.sql]: create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" already exists; SQL statement:
+create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null) [42101-214]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:90)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:97)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:75)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" already exists; SQL statement:
+create table `user` (`id` int primary key auto_increment, `name` varchar(20) not null) [42101-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:91)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 33 common frames omitted
+2022-09-14 22:42:36.270[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 8636 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:42:36.272[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:42:36.376[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:42:36.376[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:42:39.121[WARN ] o.s.c.s.AbstractApplicationContext.refresh 591  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+2022-09-14 22:42:39.138[INFO ] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage 136  : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-14 22:42:39.168[ERROR] o.s.b.SpringApplication.reportFailure 824  : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:255)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:255)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 52 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:341)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 74 common frames omitted
+2022-09-14 22:46:05.667[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 14552 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:46:05.674[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:46:05.756[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:46:05.768[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:46:07.707[WARN ] o.s.c.s.AbstractApplicationContext.refresh 591  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+2022-09-14 22:46:07.755[INFO ] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage 136  : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-14 22:46:07.789[ERROR] o.s.b.SpringApplication.reportFailure 824  : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthEndpointGroupsBeanPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.admin.tool.SpringApplication.main(SpringApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:255)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:255)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 52 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:341)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 74 common frames omitted
+2022-09-14 22:46:23.614[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 14240 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:46:23.617[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:46:23.697[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:46:23.698[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:46:26.555[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:46:26.568[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:46:26.569[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:46:26.570[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:46:26.720[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:46:26.722[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3023 ms
+2022-09-14 22:46:26.901[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:46:26.910[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:46:26.911[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:46:26.913[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:46:26.914[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:46:26.915[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:46:26.916[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:46:26.916[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:46:26.917[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:46:27.538[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:46:27.542[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:46:27.543[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-14 22:46:28.300[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:46:28.304[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:46:28.310[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:46:28.311[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:46:28.312[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:46:28.312[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:46:28.312[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:46:28.312[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:46:28.313[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:46:28.313[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:46:28.313[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:46:28.313[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:46:28.313[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:46:28.313[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:46:28.314[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:46:28.314[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:46:28.314[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:46:28.314[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:46:28.315[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:46:28.316[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:46:28.338[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:46:28.429[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 564a2070-bf69-46e9-8ac2-c0f255d12e89
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:46:28.663[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38ba08ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f5cd17, org.springframework.security.web.context.SecurityContextPersistenceFilter@61125583, org.springframework.security.web.header.HeaderWriterFilter@572f39cf, org.springframework.security.web.authentication.logout.LogoutFilter@722c41a3, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@421317dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34e38b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b0c9128, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38b82496, org.springframework.security.web.session.SessionManagementFilter@c00f57f, org.springframework.security.web.access.ExceptionTranslationFilter@16804b8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@461fcd0f]
+2022-09-14 22:46:28.676[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@202d87ac. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:46:28.677[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@202d87ac
+2022-09-14 22:46:29.654[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:46:29.673[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:46:29.737[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:46:29.784[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:46:29.822[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 6.925 seconds (JVM running for 7.544)
+2022-09-14 22:49:35.507[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 22:49:35.508[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-14 22:49:35.511[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 3 ms
+2022-09-14 22:49:35.589[ERROR] c.a.t.c.c.e.GlobalExceptionHandler.handleException 28  : Error Exception
+2022-09-14 22:49:35.648[WARN ] o.s.w.s.h.AbstractHandlerExceptionResolver.logException 208  : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.admin.tool.common.model.ApiResponse<java.lang.String>> com.admin.tool.api.user.controller.UserController.xaTransactionTest(java.util.Map<java.lang.String, java.lang.Object>)]
+2022-09-14 22:51:10.211[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 4020 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:51:10.214[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:51:10.281[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:51:10.281[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:51:14.368[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:51:14.384[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:51:14.388[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:51:14.388[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:51:14.548[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:51:14.550[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 4268 ms
+2022-09-14 22:51:14.720[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:51:14.729[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:51:14.730[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:51:14.733[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:51:14.734[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:51:14.735[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:51:14.735[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:51:14.736[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:51:14.737[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:51:15.262[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:51:15.267[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:51:15.268[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-14 22:51:16.117[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:51:16.123[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:51:16.130[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:51:16.130[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:51:16.130[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:51:16.131[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:51:16.131[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:51:16.132[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:51:16.132[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:51:16.132[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:51:16.132[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:51:16.133[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:51:16.133[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:51:16.133[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:51:16.133[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:51:16.133[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:51:16.133[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:51:16.134[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:51:16.134[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:51:16.134[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:51:16.134[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:51:16.134[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:51:16.135[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:51:16.135[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:51:16.135[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:51:16.137[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:51:16.157[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:51:16.242[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 95478808-64fb-47f4-bcfb-e36859eb841e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:51:16.449[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73a2a1eb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64dc08b3, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ff1df30, org.springframework.security.web.header.HeaderWriterFilter@50c9c2b5, org.springframework.security.web.authentication.logout.LogoutFilter@3baee2d7, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@29071a08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b8eb437, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5684cee9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15642e19, org.springframework.security.web.session.SessionManagementFilter@78a1df9a, org.springframework.security.web.access.ExceptionTranslationFilter@6ddea439, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@419ace72]
+2022-09-14 22:51:16.470[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@579d4d18. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:51:16.470[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@579d4d18
+2022-09-14 22:51:18.263[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:51:18.297[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:51:18.332[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:51:18.375[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:51:18.461[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 8.942 seconds (JVM running for 9.619)
+2022-09-14 22:51:21.472[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 22:51:21.473[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-14 22:51:21.474[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 1 ms
+2022-09-14 22:53:11.398[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 10424 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:53:11.405[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:53:11.483[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:53:11.484[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:53:14.288[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:53:14.301[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:53:14.301[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:53:14.302[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:53:14.424[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:53:14.425[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 2940 ms
+2022-09-14 22:53:14.651[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:53:14.673[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:53:14.679[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:53:14.682[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:53:14.684[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:53:14.686[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:53:14.688[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:53:14.688[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:53:14.689[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:53:15.162[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:53:15.168[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:53:15.170[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-14 22:53:16.039[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:53:16.043[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:53:16.087[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:53:16.088[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:53:16.089[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:53:16.089[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:53:16.090[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:53:16.090[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:53:16.090[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:53:16.090[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:53:16.094[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:53:16.095[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:53:16.096[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:53:16.096[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:53:16.096[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:53:16.096[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:53:16.096[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:53:16.097[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:53:16.097[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:53:16.097[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:53:16.097[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:53:16.098[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:53:16.102[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:53:16.104[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:53:16.104[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:53:16.105[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:53:16.153[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:53:16.464[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 4aaa0098-5258-41d9-a4ca-f847e99bfe32
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:53:16.752[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1611c2e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59cd04d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@295fe28f, org.springframework.security.web.header.HeaderWriterFilter@78d93def, org.springframework.security.web.authentication.logout.LogoutFilter@377ba923, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@7ca9a419, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f80b8d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@450712eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2739bdee, org.springframework.security.web.session.SessionManagementFilter@76dce1f6, org.springframework.security.web.access.ExceptionTranslationFilter@57ea7611, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c6a6f35]
+2022-09-14 22:53:16.813[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@5b9731a2. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:53:16.815[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@5b9731a2
+2022-09-14 22:53:20.354[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:53:20.369[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:53:20.475[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:53:20.727[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:53:20.775[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 10.054 seconds (JVM running for 10.715)
+2022-09-14 22:53:22.455[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-14 22:53:22.456[INFO ] o.s.w.s.FrameworkServlet.initServletBean 525  : Initializing Servlet 'dispatcherServlet'
+2022-09-14 22:53:22.458[INFO ] o.s.w.s.FrameworkServlet.initServletBean 547  : Completed initialization in 2 ms
+2022-09-14 22:53:22.838[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root2: refreshed XAResource
+2022-09-14 22:53:23.210[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root3: refreshed XAResource
+2022-09-14 22:54:19.420[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 19796 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:54:19.424[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:54:19.509[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:54:19.509[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:54:22.487[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:54:22.502[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:54:22.503[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:54:22.504[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:54:22.626[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:54:22.627[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3117 ms
+2022-09-14 22:54:22.819[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:54:22.832[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:54:22.833[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:54:22.841[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:54:22.842[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:54:22.843[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:54:22.844[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:54:22.845[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:54:22.845[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:54:23.239[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:54:23.244[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:54:23.244[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-14 22:54:23.963[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:54:23.967[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:54:23.976[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:54:23.977[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:54:23.977[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:54:23.977[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:54:23.979[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:54:23.980[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:54:23.980[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:54:23.980[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:54:23.980[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:54:23.981[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:54:23.981[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:54:23.981[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:54:23.981[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:54:23.981[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:54:23.982[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:54:23.982[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:54:23.982[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:54:23.982[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:54:23.982[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:54:23.983[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:54:23.983[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:54:23.983[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:54:23.983[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:54:23.987[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:54:24.012[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:54:24.150[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 415f9b4d-eff7-416f-af49-321238885817
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:54:24.296[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7bd73bec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20f0aa1e, org.springframework.security.web.context.SecurityContextPersistenceFilter@79ed49c2, org.springframework.security.web.header.HeaderWriterFilter@317a3bf4, org.springframework.security.web.authentication.logout.LogoutFilter@2c0f0efe, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@22a0608e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@196ab981, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54622944, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53e05e68, org.springframework.security.web.session.SessionManagementFilter@79682200, org.springframework.security.web.access.ExceptionTranslationFilter@69e6060, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26efb26a]
+2022-09-14 22:54:24.302[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@5bfa9127. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:54:24.302[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@5bfa9127
+2022-09-14 22:54:25.747[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:54:25.771[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:54:26.075[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:54:26.190[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:54:26.274[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.537 seconds (JVM running for 8.41)
+2022-09-14 22:55:30.319[INFO ] o.s.b.StartupInfoLogger.logStarting 55  : Starting SpringApplication using Java 11.0.2 on DESKTOP-FI0Q7A3 with PID 7880 (C:\Users\seolm\test\spring-scaffold\target\classes started by seolm in C:\Users\seolm\test\spring-scaffold)
+2022-09-14 22:55:30.322[INFO ] o.s.b.SpringApplication.logStartupProfileInfo 640  : The following 1 profile is active: "prod"
+2022-09-14 22:55:30.401[INFO ] o.s.b.l.DeferredLog.logTo 255  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-14 22:55:30.402[INFO ] o.s.b.l.DeferredLog.logTo 255  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-14 22:55:33.411[INFO ] o.s.b.w.e.t.TomcatWebServer.initialize 108  : Tomcat initialized with port(s): 8080 (http)
+2022-09-14 22:55:33.424[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:55:33.426[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting service [Tomcat]
+2022-09-14 22:55:33.427[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-14 22:55:33.536[INFO ] o.a.j.l.DirectJDKLog.log 173  : Initializing Spring embedded WebApplicationContext
+2022-09-14 22:55:33.538[INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext 292  : Root WebApplicationContext: initialization completed in 3135 ms
+2022-09-14 22:55:33.714[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root
+2022-09-14 22:55:33.724[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:55:33.725[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root
+2022-09-14 22:55:33.728[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root2
+2022-09-14 22:55:33.728[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:55:33.730[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root2
+2022-09-14 22:55:33.736[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.routingDataSource 63  : Create Datasoure root3
+2022-09-14 22:55:33.737[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 89  : ===XA DataSource ===
+2022-09-14 22:55:33.740[INFO ] c.a.t.c.c.d.RouteDatasourceConfig.xaDatasource 90  : root3
+2022-09-14 22:55:34.140[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:55:34.145[WARN ] c.a.l.Slf4jLogger.logWarning 24  : atomikos connection proxy for conn1: url=jdbc:h2:mem:testdb user=SA: WARNING: transaction manager not running?
+2022-09-14 22:55:34.146[INFO ] o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources 87  : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-14 22:55:34.815[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Loaded jar:file:/C:/Users/seolm/.m2/repository/com/atomikos/transactions/4.0.6/transactions-4.0.6.jar!/transactions-defaults.properties
+2022-09-14 22:55:34.821[WARN ] c.a.l.Slf4jLogger.logWarning 24  : Thanks for using Atomikos! Evaluate http://www.atomikos.com/Main/ExtremeTransactions for advanced features and professional support
+or register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice
+2022-09-14 22:55:34.829[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_max_retries = 5
+2022-09-14 22:55:34.830[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_dir = ./
+2022-09-14 22:55:34.830[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.tm_unique_name = 192.168.219.108.tm
+2022-09-14 22:55:34.830[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_jta_timeout = 10000
+2022-09-14 22:55:34.830[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.serial_jta_transactions = true
+2022-09-14 22:55:34.830[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.allow_subtransactions = true
+2022-09-14 22:55:34.831[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.automatic_resource_registration = true
+2022-09-14 22:55:34.831[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2022-09-14 22:55:34.831[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.log_base_name = tmlog
+2022-09-14 22:55:34.831[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.oltp_retry_interval = 10000
+2022-09-14 22:55:34.831[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: java.naming.provider.url = rmi://localhost:1099
+2022-09-14 22:55:34.832[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.checkpoint_interval = 500
+2022-09-14 22:55:34.832[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+2022-09-14 22:55:34.832[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.client_demarcation = false
+2022-09-14 22:55:34.832[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+2022-09-14 22:55:34.832[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.trust_client_tm = false
+2022-09-14 22:55:34.832[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2022-09-14 22:55:34.833[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.rmi_export_class = none
+2022-09-14 22:55:34.833[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.enable_logging = true
+2022-09-14 22:55:34.833[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_timeout = 300000
+2022-09-14 22:55:34.834[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.threaded_2pc = false
+2022-09-14 22:55:34.834[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.recovery_delay = 10000
+2022-09-14 22:55:34.834[INFO ] c.a.l.Slf4jLogger.logInfo 28  : USING: com.atomikos.icatch.max_actives = 50
+2022-09-14 22:55:34.835[INFO ] c.a.l.Slf4jLogger.logInfo 28  : Using default (local) logging and recovery...
+2022-09-14 22:55:34.858[INFO ] c.a.l.Slf4jLogger.logInfo 28  : unique_H2_DB_root: refreshed XAResource
+2022-09-14 22:55:34.979[WARN ] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword 88  : 
+
+Using generated security password: 2c8868cc-cbbf-4194-977d-f6b0149b22c2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-14 22:55:35.147[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 55  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22cb8836, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32f1d22b, org.springframework.security.web.context.SecurityContextPersistenceFilter@370ed79e, org.springframework.security.web.header.HeaderWriterFilter@295fe28f, org.springframework.security.web.authentication.logout.LogoutFilter@ed7d9d7, com.admin.tool.common.config.security.AuthenticationTokenProcessingFilter@10757ab2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24ab7dd6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@537a701, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1611c2e9, org.springframework.security.web.session.SessionManagementFilter@4265c47b, org.springframework.security.web.access.ExceptionTranslationFilter@78e04c4f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b0f74b0]
+2022-09-14 22:55:35.174[WARN ] o.s.s.c.a.w.b.WebSecurity.performBuild 307  : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@bd68d16. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-14 22:55:35.174[INFO ] o.s.s.w.DefaultSecurityFilterChain.<init> 52  : Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@bd68d16
+2022-09-14 22:55:36.631[INFO ] o.s.b.d.a.OptionalLiveReloadServer.startServer 58  : LiveReload server is running on port 35729
+2022-09-14 22:55:36.659[INFO ] o.s.b.a.e.w.EndpointLinksResolver.<init> 58  : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-09-14 22:55:36.725[INFO ] o.a.j.l.DirectJDKLog.log 173  : Starting ProtocolHandler ["http-nio-8080"]
+2022-09-14 22:55:36.913[INFO ] o.s.b.w.e.t.TomcatWebServer.start 220  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-14 22:55:36.941[INFO ] o.s.b.StartupInfoLogger.logStarted 61  : Started SpringApplication in 7.269 seconds (JVM running for 7.903)

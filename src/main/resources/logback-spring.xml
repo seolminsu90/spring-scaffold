@@ -10,7 +10,7 @@
             <appender-ref ref="STDOUT" />
         </logger>
 
-        <logger name="com.atomikos.datasource.pool.ConnectionPool" level="TRACE">
+        <logger name="com.atomikos.datasource.pool.ConnectionPool" level="OFF">
             <appender-ref ref="STDOUT" />
         </logger>
         <root level="debug">
