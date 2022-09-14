@@ -5,6 +5,7 @@ Spring 최신 버전 (2.7) 기준으로 이것 저것 만들어봄
 - 기본 골격
 - Spring security rest + jwt
 - Route datasource
+- Xa Atomikos Transaction
 - Mybatis 기반 프로젝트
 - SPA oauth login 예시
 
