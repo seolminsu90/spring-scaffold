@@ -29,6 +29,12 @@ public class UserController {
 
     private final UserService userService;
 
+    @PostMapping("/xa")
+    public ResponseEntity<ApiResponse<String>> xaTransactionTest(@RequestBody Map<String, Object> params) {
+        userService.xaTransactionTest(params);
+        return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, "transaction test"));
+    }
+
     @GetMapping("")
     public ResponseEntity<ApiResponse<String>> getResponse() {
         String greetingApi = userService.greetingApi();

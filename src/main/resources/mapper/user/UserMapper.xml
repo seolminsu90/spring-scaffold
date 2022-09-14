@@ -3,6 +3,11 @@
 <mapper namespace="com.admin.tool.api.user.dao.UserMapper">
 
     <select id="selectTest" resultType="String">
-        SELECT "Hello world With routeDatasource"
+        SELECT 1
     </select>
+
+    <insert id="transactionTest" parameterType="String">
+        INSERT INTO `user`
+        (`name`) VALUES (#{value})
+    </insert>
 </mapper>

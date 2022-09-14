@@ -27,4 +27,12 @@ POST localhost:8080/auth/user
 Accept: application/json
 Authorization: eyJhbGciOiJIUzUxMiJ9.eyJuYW1lIjoibmFtZSIsImlkIjoiaWQiLCJhdXRoTGlzdCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjYxNjE0ODUzfQ.1Fqx_7Q7PBPN_Cq9gWbOG3o470HG0C3KpO_7ExhNZ22uKb5Z1dQF6ceGTOdomnfWh8ZgEVaenPlgXGc4Ks8THQ
 
+### 멀티 트렌젝션 test
 
+POST localhost:8080/api/users/xa
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Error" : "2"
+}

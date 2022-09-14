@@ -1,15 +1,20 @@
 package com.admin.tool.common.config.db;
 
 import com.admin.tool.common.aop.annotation.RoutingMapper;
+import com.atomikos.icatch.jta.TransactionManagerImp;
+import com.atomikos.icatch.jta.UserTransactionImp;
+import com.atomikos.icatch.jta.UserTransactionManager;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.transaction.managed.ManagedTransactionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.boot.jta.atomikos.AtomikosDataSourceBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,10 +23,14 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.jta.JtaTransactionManager;
 
 import javax.sql.DataSource;
+import javax.transaction.TransactionManager;
+import javax.transaction.UserTransaction;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 @Slf4j
 @Configuration
@@ -52,7 +61,7 @@ public class RouteDatasourceConfig {
         boolean isSetDefault = false;
         for (Props prop : routeDatasourceProps.getDatasource()) {
             log.info("Create Datasoure {}", prop.getLabel());
-            DataSource dataSource = datasource(prop);
+            DataSource dataSource = xaDatasource(prop);
             dataSourceMap.put(prop.getLabel(), dataSource);
             if (!isSetDefault) {
                 isSetDefault = true;
@@ -68,33 +77,37 @@ public class RouteDatasourceConfig {
     public SqlSessionFactory routingSessionFactory(@Qualifier("routingDataSource") DataSource dataSource, ApplicationContext applicationContext) throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
+        sessionFactory.setTransactionFactory(new ManagedTransactionFactory());
         sessionFactory.setMapperLocations(applicationContext.getResources("classpath:mapper/**/*.xml"));
 
         return sessionFactory.getObject();
     }
 
+    private DataSource xaDatasource(Props props) {
+        AtomikosDataSourceBean dataSource = new AtomikosDataSourceBean();
 
-    @Bean
-    public DataSource lazyRoutingDataSource(
-            @Qualifier(value = "routingDataSource") DataSource routingDataSource) {
-        return new LazyConnectionDataSourceProxy(routingDataSource);
+        log.info("===XA DataSource ===");
+        log.info(props.getLabel());
+
+        Properties properties = new Properties();
+        properties.setProperty("user", props.getUsername());
+        properties.setProperty("password", props.getPassword());
+        properties.setProperty("url", props.getJdbcUrl());
+
+        //XA 처리를 위한 드라이버 변경: AtomikosDataSourceBean은 XADataSource 인터페이스를 참조하고 있다. 다른 DB도 구현체만 바꿔주면 된다.
+        //dataSource.setXaDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlXADataSource");     // MYSQL
+        dataSource.setXaDataSourceClassName("org.h2.jdbcx.JdbcDataSource");                           // H2
+        dataSource.setXaProperties(properties);
+        dataSource.setUniqueResourceName("unique_H2_DB_" + props.getLabel());   // 관리 유니크 명명
+        dataSource.setMinPoolSize(10);                                           // 커넥션 풀 min/max 개수
+        dataSource.setMaxPoolSize(20);                                          // 커넥션 풀 min/max 개수
+        //dataSource.setPoolSize(20);
+        dataSource.setBorrowConnectionTimeout(600);                             // 커넥션 풀 대기 타임아웃 시간
+        dataSource.setMaxIdleTime(60);                                          // Idle 상태인 커넥션 풀 자동 반환 시간
+
+        // 기타 추가 옵션은 com.atomikos.jdbc.AtomikosDataSourceBean::doInit() 확인
+
+        return dataSource;
     }
 
-    @Bean
-    public PlatformTransactionManager transactionManager(
-            @Qualifier(value = "lazyRoutingDataSource") DataSource lazyRoutingDataSource) {
-        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
-        transactionManager.setDataSource(lazyRoutingDataSource);
-        return transactionManager;
-    }
-
-    private DataSource datasource(Props props) {
-        return DataSourceBuilder.create()
-                .type(HikariDataSource.class)
-                .url(props.getJdbcUrl())
-                .driverClassName(props.getDriverClassName())
-                .username(props.getUsername())
-                .password(props.getPassword())
-                .build();
-    }
 }

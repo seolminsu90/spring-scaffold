@@ -23,7 +23,19 @@ route:
     -
       label: root # example (lobby)
       driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:h2:mem:testdb #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
+      username: sa
+      password:
+    -
+      label: root2 # example (lobby)
+      driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
+      username: sa
+      password:
+    -
+      label: root3 # example (lobby)
+      driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
       username: sa
       password:
 #    -

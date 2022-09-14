@@ -3,9 +3,16 @@
     <springProfile name="default|local">
         <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
             <encoder>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level] %class{20}.%M %L  : %msg%n</pattern>
+                <pattern>%d{HH:mm:ss}[%-5level] %class{40}.%M %L  : %msg%n</pattern>
             </encoder>
         </appender>
+        <logger name="com.atomikos" level="INFO">
+            <appender-ref ref="STDOUT" />
+        </logger>
+
+        <logger name="com.atomikos.datasource.pool.ConnectionPool" level="TRACE">
+            <appender-ref ref="STDOUT" />
+        </logger>
         <root level="debug">
             <appender-ref ref="STDOUT"/>
         </root>
@@ -33,6 +40,9 @@
                 <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level] %class{20}.%M %L  : %msg%n</pattern>
             </encoder>
         </appender>
+        <logger name="com.atomikos" level="INFO">
+            <appender-ref ref="STDOUT" />
+        </logger>
         <root level="debug">
             <appender-ref ref="STDOUT"/>
             <appender-ref ref="ROLLING"/>

@@ -49,6 +49,7 @@ public class SecurityConfig {
                 .permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/oauth/**").permitAll()
+                .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/api/users/**").permitAll() // 테스트용 오픈
                 .anyRequest().authenticated()
 
