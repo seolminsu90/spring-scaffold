@@ -14,7 +14,7 @@ Spring 최신 버전 (2.7) 기준으로 이것 저것 만들어봄
 SPA의 경우 외부 Oauth 연동 방식이 조금 달라 예시로 개발
 ```
 1. Frontend -> [Oauth Server]
-- 로그인 과정을 통해 AuthorizationCode 인가 코드를 발급받는다.
+- 로그인 과정을 통해 AuthorizationCode 인가 코드를 발급받는다.(대체로 수명이 짧거나 1회성으로발급)
 - *Frontend의 별도 oauth 로그인 처리용 빈 페이지를 redirect_url로 등록한다.
 
 2. Frontend -> Backend
