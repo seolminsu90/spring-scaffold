@@ -36,6 +36,22 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, "transaction test"));
     }
 
+    // Transaction ReadOnly일때 slave보는지 확인
+    @GetMapping("")
+    public ResponseEntity<ApiResponse<Integer>> noTransactionTest() {
+        return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, userService.noTransactionTest()));
+    }
+
+    @GetMapping("/slave")
+    public ResponseEntity<ApiResponse<Integer>> transactionMasterTest() {
+        return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, userService.transactionSlaveTest()));
+    }
+
+    @GetMapping("/master")
+    public ResponseEntity<ApiResponse<Integer>> transactionSlaveTest() {
+        return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, userService.transactionMasterTest()));
+    }
+
     // 프론트엔드와의 Cookie 공유 테스트 (다른 도메인에도 되도록)
     // 테스트 결과 RestAPI에서 쿠키는 같은 도메인 그룹일때나 써야겠다...
     @GetMapping("/cookieSet")

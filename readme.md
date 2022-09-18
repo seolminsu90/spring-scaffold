@@ -1,13 +1,23 @@
 ## Spring boot 기반 기본 프로젝트
 
 Spring 최신 버전 (2.7) 기준으로 이것 저것 만들어봄
+게임 운영툴 백앤드 구축을 위한 여러가지 사항들 개발
 
 - 기본 골격
 - Spring security rest + jwt
 - Route datasource
 - Xa Atomikos Transaction
-- Mybatis 기반 프로젝트
+- Mybatis 기반 프로젝트 
 - SPA oauth login 예시
+- readonly시 _slave 바라보도록 설정
+
+### 사용 케이스
+
+1. 보통의 게임 운영툴 페이지는 단일 공통 DB + 여러 하위 게임 DB로 구성되어 있음.
+2. 여러 하위 게임 DB의 경우 동적으로 변동되는 경우가 많으니 routedatasource로 구현
+3. 변동이 없는 공통 DB의 경우 별도로 분리해서 제공 (이때 트랜젝션 사용 시 globalTxManager(xa)로 자동 참가 하는지 확인 해봐야할듯)
+
+--- 
 
 ### SPA Oauth 연동 흐름 정리 []는 제 3자의 리소스
 

@@ -6,21 +6,22 @@ import com.admin.tool.api.login.service.LoginService;
 import com.admin.tool.common.model.ApiResponse;
 import com.admin.tool.common.model.Code;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/oauth")
 @RequiredArgsConstructor
 public class KakaoLoginController {
-    private final Logger logger =  LoggerFactory.getLogger(this.getClass());
     private final LoginService loginService;
 
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<KakaoAuth>> getKakaoAuth(@RequestBody KakaoLoginRequest request){
-        logger.info("====== Get AccessToken ======");
+        log.info("====== Get AccessToken ======");
         ResponseEntity<KakaoAuth> kakaoAuthResponse = loginService.getAuth(request.getCode());
 
         if(kakaoAuthResponse.getStatusCode().is4xxClientError()){
