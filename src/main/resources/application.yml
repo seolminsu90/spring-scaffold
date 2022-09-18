@@ -20,35 +20,17 @@ management:
 route:
   datasource:
     -
-      label: root # example (lobby)
-      driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
+      label: h2
+      datasource-class-name: org.h2.jdbcx.JdbcDataSource
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL;
       username: sa
       password:
     -
-      label: root2 # example (lobby)
-      driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
-      username: sa
-      password:
-    -
-      label: root3 # example (lobby)
-      driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
-      username: sa
-      password:
-    -
-      label: root4 # example (lobby)
-      driver-class-name: org.h2.Driver # com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:h2:mem:testdb;MODE=MySQL; #"jdbc:mysql://localhost:3306/world?characterEncoding=UTF-8&serverTimezone=UTC"
-      username: sa
-      password:
-#    -
-#      label: slave
-#      driver-class-name: com.mysql.cj.jdbc.Driver
-#      jdbc-url: "jdbc:mysql://localhost:33016/world?characterEncoding=UTF-8&serverTimezone=UTC"
-#      username: root
-#      password: 1234
+      label: mysql
+      datasource-class-name: com.mysql.cj.jdbc.MysqlXADataSource
+      jdbc-url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC&pinGlobalTxToPhysicalConnection=true
+      username: root
+      password: 1234
 
 ---
 

@@ -94,12 +94,10 @@ public class RouteDatasourceConfig {
         properties.setProperty("password", props.getPassword());
         properties.setProperty("url", props.getJdbcUrl());
 
-        //XA 처리를 위한 드라이버 변경: AtomikosDataSourceBean은 XADataSource 인터페이스를 참조하고 있다. 다른 DB도 구현체만 바꿔주면 된다.
-        //dataSource.setXaDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlXADataSource");     // MYSQL
-        dataSource.setXaDataSourceClassName("org.h2.jdbcx.JdbcDataSource");                           // H2
+        dataSource.setXaDataSourceClassName(props.getDatasourceClassName());    // 각 DB가 지원하는 XA Datasource로 설정해야함.
         dataSource.setXaProperties(properties);
 
-        dataSource.setUniqueResourceName("unique_H2_DB_" + props.getLabel());   // 관리 유니크 명명
+        dataSource.setUniqueResourceName("unique_" + props.getLabel());   // 관리 유니크 명명
         dataSource.setBorrowConnectionTimeout(600);                             // 커넥션 풀 대기 타임아웃 시간
         dataSource.setMaxIdleTime(60);                                          // Idle 상태인 커넥션 풀 자동 반환 시간
         dataSource.setMinPoolSize(10);                                           // 커넥션 풀 min/max 개수

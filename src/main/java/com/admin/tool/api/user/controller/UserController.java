@@ -29,16 +29,11 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/xa")
-    public ResponseEntity<ApiResponse<String>> xaTransactionTest(@RequestBody Map<String, Object> params) {
-        userService.xaTransactionTest(params);
+    // H2 와 Mysql 두개 DB 사이에서의 Transaction 예시
+    @GetMapping("/xa")
+    public ResponseEntity<ApiResponse<String>> xaTransactionTest() {
+        userService.xaTransactionTest();
         return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, "transaction test"));
-    }
-
-    @GetMapping("")
-    public ResponseEntity<ApiResponse<String>> getResponse() {
-        String greetingApi = userService.greetingApi();
-        return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, greetingApi));
     }
 
     // 프론트엔드와의 Cookie 공유 테스트 (다른 도메인에도 되도록)
@@ -62,10 +57,5 @@ public class UserController {
         response.setHeader("Set-Cookie", cookie.toString());
 
         return ResponseEntity.ok(ApiResponse.of(Code.SUCCESS.code, "Hello world"));
-    }
-
-    @GetMapping("/rest")
-    public ResponseEntity<Map> getResponseTest() {
-        return userService.greetingFromOtherApi();
     }
 }

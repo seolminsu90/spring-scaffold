@@ -1,7 +1,7 @@
 package com.admin.tool.api.login.controller;
 
 import com.admin.tool.api.login.model.KakaoAuth;
-import com.admin.tool.api.login.model.KakaoDTO;
+import com.admin.tool.api.login.model.KakaoLoginRequest;
 import com.admin.tool.api.login.service.LoginService;
 import com.admin.tool.common.model.ApiResponse;
 import com.admin.tool.common.model.Code;
@@ -19,9 +19,9 @@ public class KakaoLoginController {
     private final LoginService loginService;
 
     @PostMapping("/login")
-    public ResponseEntity<ApiResponse<KakaoAuth>> getKakaoAuth(@RequestBody KakaoDTO dto){
+    public ResponseEntity<ApiResponse<KakaoAuth>> getKakaoAuth(@RequestBody KakaoLoginRequest request){
         logger.info("====== Get AccessToken ======");
-        ResponseEntity<KakaoAuth> kakaoAuthResponse = loginService.getAuth(dto.getCode());
+        ResponseEntity<KakaoAuth> kakaoAuthResponse = loginService.getAuth(request.getCode());
 
         if(kakaoAuthResponse.getStatusCode().is4xxClientError()){
             return ResponseEntity.ok(ApiResponse.of(Code.FAIL.code, kakaoAuthResponse.getBody()));
