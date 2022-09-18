@@ -98,12 +98,12 @@ public class RouteDatasourceConfig {
         //dataSource.setXaDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlXADataSource");     // MYSQL
         dataSource.setXaDataSourceClassName("org.h2.jdbcx.JdbcDataSource");                           // H2
         dataSource.setXaProperties(properties);
+
         dataSource.setUniqueResourceName("unique_H2_DB_" + props.getLabel());   // 관리 유니크 명명
-        dataSource.setMinPoolSize(10);                                           // 커넥션 풀 min/max 개수
-        dataSource.setMaxPoolSize(20);                                          // 커넥션 풀 min/max 개수
-        //dataSource.setPoolSize(20);
         dataSource.setBorrowConnectionTimeout(600);                             // 커넥션 풀 대기 타임아웃 시간
         dataSource.setMaxIdleTime(60);                                          // Idle 상태인 커넥션 풀 자동 반환 시간
+        dataSource.setMinPoolSize(10);                                           // 커넥션 풀 min/max 개수
+        dataSource.setMaxPoolSize(20);                                          // 커넥션 풀 min/max 개수
 
         // 기타 추가 옵션은 com.atomikos.jdbc.AtomikosDataSourceBean::doInit() 확인
 

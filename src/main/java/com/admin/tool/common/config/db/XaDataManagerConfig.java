@@ -36,7 +36,7 @@ public class XaDataManagerConfig {
         return userTransactionManager;
     }
 
-    @Bean(name = "multiTxManager")
+    @Bean(name = "globalTxManager")
     @DependsOn({ "userTransaction", "atomikosTransactionManager" })
     public PlatformTransactionManager transactionManager(UserTransaction userTransaction, TransactionManager atomikosTransactionManager) {
         JtaTransactionManager txManager = new JtaTransactionManager(userTransaction, atomikosTransactionManager);

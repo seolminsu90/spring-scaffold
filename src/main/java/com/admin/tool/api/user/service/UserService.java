@@ -18,7 +18,7 @@ public class UserService {
     private final UserMapper userMapper;
     private final FixedUserMapper fixedUserMapper;
     private final RestAPI api;
-    @Transactional("multiTxManager")
+    @Transactional("globalTxManager")
     public void xaTransactionTest(Map<String, Object> params) {
         fixedUserMapper.transactionTest("fix1");
         userMapper.transactionTest("root", "1");
