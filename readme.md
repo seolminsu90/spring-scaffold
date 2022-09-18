@@ -33,4 +33,21 @@ Frontend
 - 별도의 JWT 저장 및 api에 사용
 ```
 
-기타 더 필요한 것들 수시로 추가
+### XA datasource Mysql의 경우 추가 옵션 필요
+```
+pinGlobalTxToPhysicalConnection=true 매개변수를 jdbc URL에 추가하거나 com.atomikos.jdbc.AtomikosDataSourceBean Spring 정의 내의 매개변수로 추가
+
+<bean id="dataSource" class="com.atomikos.jdbc.AtomikosDataSourceBean"
+        init-method="init" destroy-method="close">
+...
+<property name="xaProperties">
+   <props>
+      <prop key="pinGlobalTxToPhysicalConnection">true</prop>  
+   </props>     
+</property>
+</bean>
+```
+
+---
+
+**기타 더 필요한 것들 수시로 추가**
