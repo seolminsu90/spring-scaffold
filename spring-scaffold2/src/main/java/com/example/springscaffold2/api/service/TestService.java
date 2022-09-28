@@ -20,6 +20,13 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class TestService {
+    /**
+        DB example
+        ---------------
+        root -> test
+        sub -> test2
+        router -> test, test2, test3
+    */
     private final TestRootRepository testRootRepository; // 단일
     private final TestSubRepository testSubRepository; // 단일
     private final TestMapper testMapper; // 다중 (Route)
@@ -39,14 +46,10 @@ public class TestService {
         List<Object> results = new ArrayList<>();
         log.info("====================================");
         results.addAll(testSubRepository.findAll());
-        ThreadLocalContext.remove();
-
         results.addAll(testRootRepository.findAll());
-        ThreadLocalContext.remove();
 
         ThreadLocalContext.set("test3");
         results.addAll(testMapper.findAll());
-        ThreadLocalContext.remove();
         log.info("====================================");
 
         return results;
