@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <springProfile name="default|local">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{HH:mm:ss}[%-5level] %class{40}.%M %L  : %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <logger name="com.atomikos" level="INFO"></logger>
+        <logger name="com.atomikos.datasource.pool.ConnectionPool" level="OFF"></logger>
+
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+</configuration>

@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: 'xa-jpa-scaffold'
+  jackson:
+    time-zone: "Asia/Seoul"
+  jpa:
+    open-in-view: true # false 시 Transaction이 끝나면 영속성컨텍스트 또한 닫힌다. (lazyLoading 못씀)
+  jta:
+    enabled: true
+
+# 다중 RouteDatasource (테스트 상 test,test2는 각각 root,sub로 지정하여 테스트해봤다.)
+route:
+  datasource:
+    -
+      label: test
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: 1234
+    -
+      label: test2
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test2?characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: 1234
+    -
+      label: test3
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test3?characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: 1234

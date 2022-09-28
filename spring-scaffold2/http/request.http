@@ -1,0 +1,16 @@
+
+### 멀티 트렌젝션 test
+
+GET localhost:8080/getNoTran
+Accept: application/json
+Content-Type: application/json
+
+{}
+
+###
+
+GET localhost:8080/getTran
+Accept: application/json
+Content-Type: application/json
+
+{}
