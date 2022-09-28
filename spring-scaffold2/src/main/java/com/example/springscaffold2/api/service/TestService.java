@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,8 @@ public class TestService {
     private final TestRootRepository testRootRepository; // 단일
     private final TestSubRepository testSubRepository; // 단일
     private final TestMapper testMapper; // 다중 (Route)
+
+    private final PropagationTestService testService;
 
     public List<Object> getNoTran() {
         return this.selectOtherDBs();
@@ -56,6 +59,9 @@ public class TestService {
 
     @Transactional(value = "multiTxManager", propagation = Propagation.REQUIRED) //default
     public int getTranRb() {
+        // XA 전파 테스트 - 잘 됨
+        testService.imNeedParent();
+        testService.imSolo();
         this.rollbackTest();
         return 0;
     }

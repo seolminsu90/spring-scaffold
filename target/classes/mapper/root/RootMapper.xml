@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin.tool.api.user.dao.RootMapper">
+    <insert id="transactionTest" parameterType="String">
+        INSERT INTO `tb_user`
+        (`name`) VALUES (#{value})
+    </insert>
+    <select id="selectWorld" resultType="Integer">
+        SELECT 1
+    </select>
+</mapper>
