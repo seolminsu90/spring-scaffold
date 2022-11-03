@@ -62,6 +62,13 @@ pinGlobalTxToPhysicalConnection=true 매개변수를 jdbc URL에 추가하거나
 ```
 *scaffold2에 옵션 안줬는데 잘 되는 것 같은데 뭐지..*
 
+
+### 메모
+
+- H2 대소문자 구분 처리 
+```yml
+jdbc:h2:mem:testdb;MODE=MySQL;DATABASE_TO_UPPER=false
+```
 ---
 
 ## Spring scaffold2
@@ -87,11 +94,6 @@ PRIMARY KEY (`seq`) USING BTREE
 )
 ;
 ```
-
-### Memo
-
-- H2 대소문자 구분 처리 
-        --> jdbc:h2:mem:testdb;MODE=MySQL;DATABASE_TO_UPPER=false
 
 ---
 
