@@ -9,8 +9,9 @@ logging:
 ---
 
 spring:
-  profiles: default, local
-
+  config:
+    activate:
+      on-profile: default, local
 
 management:
   endpoint:
@@ -47,4 +48,6 @@ repositories:
 ---
 
 spring:
-  profiles: prod
+  config:
+    activate:
+      on-profile: prod
