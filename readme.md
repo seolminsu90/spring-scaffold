@@ -88,6 +88,11 @@ PRIMARY KEY (`seq`) USING BTREE
 ;
 ```
 
+### Memo
+
+- H2 대소문자 구분 처리 
+        --> jdbc:h2:mem:testdb;MODE=MySQL;DATABASE_TO_UPPER=false
+
 ---
 
 ### atomikos properties 메모
